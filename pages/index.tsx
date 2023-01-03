@@ -13,6 +13,7 @@ import {
   SiExpress,
   SiTailwindcss,
   SiFreecodecamp,
+  SiStyledcomponents,
 } from "react-icons/si";
 import React from "react";
 import axios from "axios";
@@ -194,26 +195,35 @@ export default function Home() {
             <div className=" py-10 flex flex-col gap-5 justify-center md:text-xl lg:flex-row lg:flex-wrap lg:gap-16">
               <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
                 {" "}
-                <a
-                  href="https://task-manager-alanolog.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className=" text-teal-600"
-                >
-                  Task Manager
-                </a>
+                <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <SiNextdotjs />
+                  <SiTypescript />
+                  <SiRedux />
+                  <SiSass />
+                  <a
+                    href="https://task-manager-alanolog.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className=" text-teal-600 "
+                  >
+                    Task Manager
+                  </a>
+                </div>
                 <Image src={web1} alt="Task Manager" />
               </div>
               <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
-                {" "}
-                <a
-                  href="https://alan-rutyna-api.onrender.com/api-docs/#/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className=" text-teal-600"
-                >
-                  API for Task Manager
-                </a>
+                <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <SiMongodb />
+                  <SiExpress />
+                  <a
+                    href="https://alan-rutyna-api.onrender.com/api-docs/#/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className=" text-teal-600 "
+                  >
+                    API for Task Manager
+                  </a>
+                </div>
                 <Image src={web2} alt="API for task manager" />
               </div>
             </div>
@@ -226,7 +236,10 @@ export default function Home() {
                 <span> Największe projekty w których brałem udział:</span>
               </p>
               <ul className=" list-disc list-inside mt-2 mb-5 md:list-none dark:text-gray-400 text-center">
-                <li>
+                <li className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <SiNextdotjs />
+                  <SiTypescript />
+                  <SiStyledcomponents />
                   <a
                     href="https://jedynka.polskieradio.pl/"
                     target="_blank"
@@ -236,7 +249,9 @@ export default function Home() {
                     Jedynka Polskiego Radia
                   </a>
                 </li>
-                <li>
+                <li className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <RiReactjsFill />
+                  <SiSass />
                   <a
                     href="https://reportaz.polskieradio.pl/"
                     target="_blank"
@@ -246,7 +261,10 @@ export default function Home() {
                     Studio Reportażu i Dokumentu Polskiego Radia
                   </a>
                 </li>
-                <li>
+                <li className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <SiCss3 />
+                  <SiHtml5 />
+                  <SiJavascript />
                   <a
                     href="https://www.polskieradio.pl/377/9933"
                     target="_blank"
