@@ -84,11 +84,19 @@ export default function Home() {
             </h3>
           </div>
           <div className="text-5xl flex justify-center gap-16 text-gray-800 md:text-7xl dark:text-gray-100">
-            <a href="https://github.com/Alanolog" target="_blank">
+            <a
+              href="https://github.com/Alanolog"
+              rel="noreferrer"
+              target="_blank"
+            >
               {" "}
               <AiFillGithub />
             </a>
-            <a href="https://gitlab.com/Alanolog" target="_blank">
+            <a
+              href="https://gitlab.com/Alanolog"
+              rel="noreferrer"
+              target="_blank"
+            >
               {" "}
               <AiFillGitlab />
             </a>
@@ -176,6 +184,7 @@ export default function Home() {
                   className=" text-teal-600"
                   href="https://github.com/Alanolog"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   githubie
                 </a>
@@ -188,6 +197,7 @@ export default function Home() {
                 <a
                   href="https://task-manager-alanolog.vercel.app/"
                   target="_blank"
+                  rel="noreferrer"
                   className=" text-teal-600"
                 >
                   Task Manager
@@ -199,6 +209,7 @@ export default function Home() {
                 <a
                   href="https://alan-rutyna-api.onrender.com/api-docs/#/"
                   target="_blank"
+                  rel="noreferrer"
                   className=" text-teal-600"
                 >
                   API for Task Manager
@@ -219,6 +230,7 @@ export default function Home() {
                   <a
                     href="https://jedynka.polskieradio.pl/"
                     target="_blank"
+                    rel="noreferrer"
                     className=" text-teal-600"
                   >
                     Jedynka Polskiego Radia
@@ -228,6 +240,7 @@ export default function Home() {
                   <a
                     href="https://reportaz.polskieradio.pl/"
                     target="_blank"
+                    rel="noreferrer"
                     className=" text-teal-600"
                   >
                     Studio Reportażu i Dokumentu Polskiego Radia
@@ -237,6 +250,7 @@ export default function Home() {
                   <a
                     href="https://www.polskieradio.pl/377/9933"
                     target="_blank"
+                    rel="noreferrer"
                     className=" text-teal-600"
                   >
                     Muzyczne Źródełko 2022
