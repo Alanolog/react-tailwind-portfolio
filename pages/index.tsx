@@ -68,7 +68,7 @@ export default function Home() {
               <li>
                 <a
                   className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-8"
-                  href="#"
+                  href="./Alan_Rutyna_CV.pdf"
                 >
                   CV
                 </a>
@@ -174,10 +174,10 @@ export default function Home() {
         <section className="max-w-7xl mx-auto">
           <div>
             <div>
-              <h2 className=" text-2xl my-5 md:text-4xl dark:text-gray-400 ">
+              <h2 className=" text-2xl my-5 md:text-4xl dark:text-gray-400 text-center ">
                 Portfolio
               </h2>
-              <p className=" my-1 md:text-xl dark:text-gray-400">
+              <p className=" my-1 md:text-xl dark:text-gray-400 text-center">
                 Projekty które stworzyłem w niedawnym czasie, kod można zobaczyć
                 na{" "}
                 <a
@@ -218,14 +218,14 @@ export default function Home() {
               </div>
             </div>
             <div className=" py-5 md:text-xl">
-              <p className=" py-1 dark:text-gray-400">
+              <p className=" py-1 dark:text-gray-400 text-center">
                 niestety kodu z projektów w dawnej pracy nie mogę pokazać z
                 względu na ustawienie repozytoriów na prywatne wewnątrz
                 organizacji, dlatego jedynie pozostawiam linki do wersji
-                produkcyjnych. <br />
-                <span>największe projekty w których brałem udział:</span>
+                produkcyjnych.
+                <span> Największe projekty w których brałem udział:</span>
               </p>
-              <ul className=" list-disc list-inside mt-2 mb-5 md:list-none dark:text-gray-400">
+              <ul className=" list-disc list-inside mt-2 mb-5 md:list-none dark:text-gray-400 text-center">
                 <li>
                   <a
                     href="https://jedynka.polskieradio.pl/"
