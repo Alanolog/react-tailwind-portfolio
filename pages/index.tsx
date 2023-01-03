@@ -13,12 +13,31 @@ import {
   SiExpress,
   SiTailwindcss,
 } from "react-icons/si";
+import React from "react";
+import axios from "axios";
 import { RiReactjsFill } from "react-icons/ri";
 import Image from "next/image";
 import avatar from "../public/avatar.png";
 import code from "../public/code.png";
+import web1 from "../public/web1.png";
+import web2 from "../public/web2.png";
 
 export default function Home() {
+  // need to fetch to wake up server for portfolio apps
+  React.useEffect(() => {
+    axios
+      .post("https://alan-rutyna-api.onrender.com/api/v1/auth/login", {
+        email: "alan12345@gmail.com",
+        password: "secret",
+      })
+      .then()
+      .catch((err) =>
+        console.log(
+          "don't worry i just wake up server for portfolio apps which causes this 401 for bad request"
+        )
+      );
+  }, []);
+
   return (
     <>
       <Head>
@@ -40,7 +59,7 @@ export default function Home() {
                   className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-8"
                   href="#"
                 >
-                  Resume
+                  CV
                 </a>
               </li>
             </ul>
@@ -52,11 +71,17 @@ export default function Home() {
             <h3 className="text-2xl py-2">Junior React Front-End Developer</h3>
           </div>
           <div className="text-5xl flex justify-center gap-16 text-gray-800">
-            <AiFillGithub />
-            <AiFillGitlab />
+            <a href="https://github.com/Alanolog" target="_blank">
+              {" "}
+              <AiFillGithub />
+            </a>
+            <a href="https://gitlab.com/Alanolog" target="_blank">
+              {" "}
+              <AiFillGitlab />
+            </a>
           </div>
-          <div className=" relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden">
-            <Image alt="avatar" src={avatar} fill objectFit="cover" />
+          <div className=" relative bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-20 mx-auto overflow-hidden max-w-full">
+            <Image alt="avatar" src={avatar} fill className=" object-cover " />
           </div>
         </section>
         <section>
@@ -64,7 +89,7 @@ export default function Home() {
             <div>
               <Image alt="code icon" src={code} width={100} height={100} />
             </div>
-            <h3 className="text-2xl py-1">Technologies which i use:</h3>
+            <h3 className="text-2xl py-1">Programuje przy użyciu:</h3>
             <ul className=" flex flex-col py-2 gap-4 leading-8 text-gray-800">
               <li className=" flex justify-center items-center gap-1">
                 <p className="flex justify-center items-center">
@@ -84,13 +109,94 @@ export default function Home() {
               </li>
               <li className=" flex justify-center gap-1 items-center">
                 <SiSass />
-                <SiTailwindcss /> Sass&nbsp;+&nbsp;Tailwind
+                <SiTailwindcss /> Sass&nbsp;/&nbsp;Tailwind
               </li>
               <li className=" flex justify-center gap-1 items-center">
                 <SiMongodb />
-                <SiExpress /> ExpressJS+MongoDB
+                <SiExpress /> Dodatkowo&nbsp;ExpressJS+MongoDB
               </li>
             </ul>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div>
+              <h2 className=" text-2xl my-5">Portfolio</h2>
+              <p className=" my-1">
+                Projekty które stworzyłem w niedawnym czasie, kod można zobaczyć
+                na{" "}
+                <a
+                  className=" text-teal-600"
+                  href="https://github.com/Alanolog"
+                  target="_blank"
+                >
+                  githubie
+                </a>
+                .
+              </p>
+            </div>
+            <div className=" my-10 flex flex-col gap-5 justify-center">
+              <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl">
+                {" "}
+                <a
+                  href="https://task-manager-alanolog.vercel.app/"
+                  target="_blank"
+                  className=" text-teal-600"
+                >
+                  Task Manager
+                </a>
+                <Image src={web1} alt="Task Manager" />
+              </div>
+              <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl">
+                {" "}
+                <a
+                  href="https://alan-rutyna-api.onrender.com/api-docs/#/"
+                  target="_blank"
+                  className=" text-teal-600"
+                >
+                  API for Task Manager
+                </a>
+                <Image src={web2} alt="API for task manager" />
+              </div>
+            </div>
+            <div>
+              <p className=" my-1">
+                niestety kodu z projektów w dawnej pracy nie mogę pokazać z
+                względu na ustawienie repozytoriów na prywatne wewnątrz
+                organizacji, dlatego jedynie pozostawiam linki do wersji
+                produkcyjnych. <br />
+                <span>największe projekty w których brałem udział:</span>
+              </p>
+              <ul className=" list-disc list-inside mt-2 mb-5">
+                <li>
+                  <a
+                    href="https://jedynka.polskieradio.pl/"
+                    target="_blank"
+                    className=" text-teal-600"
+                  >
+                    Jedynka Polskiego Radia
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://reportaz.polskieradio.pl/"
+                    target="_blank"
+                    className=" text-teal-600"
+                  >
+                    Studio Reportażu i Dokumentu Polskiego Radia
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.polskieradio.pl/377/9933"
+                    target="_blank"
+                    className=" text-teal-600"
+                  >
+                    Muzyczne Źródełko 2022
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
