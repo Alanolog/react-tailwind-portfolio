@@ -26,6 +26,7 @@ import code from "../public/code.png";
 import learning from "../public/learning.png";
 import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
+import web3 from "../public/web3.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = React.useState(false);
@@ -225,6 +226,22 @@ export default function Home() {
                   </a>
                 </div>
                 <Image src={web2} alt="API for task manager" />
+              </div>
+              <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
+                <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <SiNextdotjs />
+                  <SiTypescript />
+                  <SiTailwindcss />
+                  <a
+                    href="https://calculator-app-taupe-nine.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className=" text-teal-600 "
+                  >
+                    IOS Calculator Copy
+                  </a>
+                </div>
+                <Image src={web3} alt="IOS Calculator App" />
               </div>
             </div>
             <div className=" py-5 md:text-xl">
