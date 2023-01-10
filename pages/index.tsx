@@ -27,6 +27,7 @@ import learning from "../public/learning.png";
 import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
+import web4 from "../public/web4.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = React.useState(false);
@@ -195,7 +196,22 @@ export default function Home() {
             </div>
             <div className=" py-10 flex flex-col gap-5 justify-center md:text-xl lg:flex-row lg:flex-wrap lg:gap-16">
               <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
-                {" "}
+                <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
+                  <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                    <SiNextdotjs />
+                    <SiTypescript />
+                    <SiTailwindcss />
+                    <a
+                      href="https://alan-rutyna-ecommerce-shop.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className=" text-teal-600 "
+                    >
+                      Ecommerce shop
+                    </a>
+                  </div>
+                  <Image src={web4} alt="Ecommerce shop app" />
+                </div>
                 <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
                   <SiNextdotjs />
                   <SiTypescript />
