@@ -336,7 +336,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className=" py-3 flex justify-center border-t">
+      <footer className=" py-3 flex justify-center border-t dark: bg-gray-900">
         <h3 className=" text-xl font-burtons font-light dark:text-gray-400 flex gap-1  items-center">
           Alan Rutyna 2022
           <AiOutlineCopyrightCircle />
