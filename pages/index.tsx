@@ -1,6 +1,10 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { AiFillGithub, AiFillGitlab } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillGitlab,
+  AiOutlineCopyrightCircle,
+} from "react-icons/ai";
 import {
   SiTypescript,
   SiNextdotjs,
@@ -31,6 +35,7 @@ import web4 from "../public/web4.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = React.useState(false);
+  const [isEnglish, setIsEnglish] = React.useState(false);
 
   // need to fetch to wake up server for portfolio apps
   React.useEffect(() => {
@@ -61,16 +66,22 @@ export default function Home() {
             <h1 className=" text-2xl font-burtons dark:text-gray-400">
               Alan Rutyna
             </h1>
-            <ul className=" flex items-center">
+            <ul className=" flex items-center gap-4">
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
                   className=" cursor-pointer text-2xl dark:text-gray-400"
                 />
               </li>
+              <li
+                onClick={() => setIsEnglish(!isEnglish)}
+                className=" cursor-pointer text-2xl dark:text-gray-400 font-burtons "
+              >
+                {isEnglish ? "PL" : "EN"}
+              </li>
               <li>
                 <a
-                  className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-8"
+                  className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
                   href="./Alan_Rutyna_CV.pdf"
                 >
                   CV
@@ -118,7 +129,7 @@ export default function Home() {
               />
             </div>
             <h3 className="text-2xl py-1 md:text-4xl dark:text-gray-200 text-center">
-              Programuje przy użyciu:
+              {isEnglish ? "Languages that I use:" : "Programuje przy użyciu:"}
             </h3>
             <ul className=" flex flex-col py-2 gap-4 leading-8 text-gray-800 md:gap-6 md:py-4 md:text-xl dark:text-gray-200">
               <li className=" flex justify-center items-center gap-1">
@@ -143,7 +154,8 @@ export default function Home() {
               </li>
               <li className=" flex justify-center gap-1 items-center">
                 <SiMongodb />
-                <SiExpress /> Dodatkowo&nbsp;ExpressJS+MongoDB
+                <SiExpress /> {isEnglish ? "Basic" : "Podstawy"}
+                &nbsp;ExpressJS+MongoDB
               </li>
             </ul>
           </div>
@@ -156,7 +168,9 @@ export default function Home() {
               />
             </div>
             <h3 className="text-2xl py-1 md:text-4xl dark:text-gray-200 text-center">
-              Wykształcenie & Doświadczenie:
+              {isEnglish
+                ? "Education & Experience"
+                : "Wykształcenie & Doświadczenie:"}
             </h3>
             <ul className=" flex flex-col py-2 gap-4 leading-8 text-gray-800 md:gap-6 md:py-4 md:text-xl dark:text-gray-200">
               <li className=" flex justify-center gap-1 items-center">
@@ -165,11 +179,16 @@ export default function Home() {
               </li>
               <li className=" flex justify-center gap-1 items-center">
                 <SiFreecodecamp className="lg:text-4xl" />
-                07.2021 - 09.2021 Coders&nbsp;Lab Kurs JavaScript Developer
+                07.2021 - 09.2021 Coders&nbsp;Lab{" "}
+                {isEnglish
+                  ? "Javascript Developer Bootcamp"
+                  : "Kurs JavaScript Developer"}
               </li>
               <li className=" flex justify-center gap-1 items-center">
-                <IoIosSchool className="lg:text-4xl" />W Weekendy uczę się w
-                Liceum Ogólnokształcącym
+                <IoIosSchool className="lg:text-4xl" />
+                {isEnglish
+                  ? "I study weekends in high school"
+                  : "W Weekendy uczę się w Liceum Ogólnokształcącym"}
               </li>
             </ul>
           </div>
@@ -181,37 +200,38 @@ export default function Home() {
                 Portfolio
               </h2>
               <p className=" my-1 md:text-xl dark:text-gray-400 text-center">
-                Projekty które stworzyłem w niedawnym czasie, kod można zobaczyć
-                na{" "}
+                {isEnglish
+                  ? "Projects that I have created recently, the code can be seen on "
+                  : "Projekty które stworzyłem w niedawnym czasie, kod można zobaczyć na "}
                 <a
                   className=" text-teal-600"
                   href="https://github.com/Alanolog"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  githubie
+                  {isEnglish ? "GitHub" : "GitHubie"}
                 </a>
                 .
               </p>
             </div>
             <div className=" py-10 flex flex-col gap-5 justify-center md:text-xl lg:flex-row lg:flex-wrap lg:gap-16">
-              <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
-                <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
-                  <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
-                    <SiNextdotjs />
-                    <SiTypescript />
-                    <SiTailwindcss />
-                    <a
-                      href="https://alan-rutyna-ecommerce-shop.vercel.app/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className=" text-teal-600 "
-                    >
-                      Ecommerce shop
-                    </a>
-                  </div>
-                  <Image src={web4} alt="Ecommerce shop app" />
+              <div className=" flex flex-col gap-1 justify-center items-center max-w-[66%] ">
+                <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
+                  <SiNextdotjs />
+                  <SiTypescript />
+                  <SiTailwindcss />
+                  <a
+                    href="https://alan-rutyna-ecommerce-shop.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className=" text-teal-600 "
+                  >
+                    Ecommerce shop
+                  </a>
                 </div>
+                <Image src={web4} alt="Ecommerce shop app" />
+              </div>
+              <div className=" flex flex-col gap-1 justify-center items-center max-w-7xl basis-1/3">
                 <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
                   <SiNextdotjs />
                   <SiTypescript />
@@ -262,11 +282,15 @@ export default function Home() {
             </div>
             <div className=" py-5 md:text-xl">
               <p className=" py-1 dark:text-gray-400 text-center">
-                niestety kodu z projektów w dawnej pracy nie mogę pokazać z
-                względu na ustawienie repozytoriów na prywatne wewnątrz
-                organizacji, dlatego jedynie pozostawiam linki do wersji
-                produkcyjnych.
-                <span> Największe projekty w których brałem udział:</span>
+                {isEnglish
+                  ? "Unfortunately, I can't show the code from the projects in my old job due to the privacy status of repositories, so I only leave links to the production versions."
+                  : "niestety kodu z projektów w dawnej pracy nie mogę pokazać z względu na ustawienia prywatności repozytoriów, dlatego jedynie pozostawiam linki do wersji produkcyjnych."}
+                <span>
+                  {" "}
+                  {isEnglish
+                    ? "The most challenging projects in which I participated:"
+                    : "Największe projekty w których brałem udział:"}
+                </span>
               </p>
               <ul className=" list-disc list-inside mt-2 mb-5 md:list-none dark:text-gray-400 text-center">
                 <li className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
@@ -312,6 +336,12 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className=" py-3 flex justify-center border-t">
+        <h3 className=" text-xl font-burtons font-light dark:text-gray-400 flex gap-1  items-center">
+          Alan Rutyna 2022
+          <AiOutlineCopyrightCircle />
+        </h3>
+      </footer>
     </div>
   );
 }
