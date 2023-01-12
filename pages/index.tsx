@@ -79,25 +79,14 @@ export default function Home() {
               >
                 {isEnglish ? "PL" : "EN"}
               </li>
-              {isEnglish ? (
                 <li>
                   <a
                     className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
-                    href="./Alan_Rutyna_CV_EN.pdf"
+                    href={isEnglish ? "./Alan_Rutyna_CV_EN.pdf" : "./Alan_Rutyna_CV.pdf"}
                   >
-                    CV-EN
+                    CV
                   </a>
                 </li>
-              ) : (
-                <li>
-                  <a
-                    className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
-                    href="./Alan_Rutyna_CV.pdf"
-                  >
-                    CV-PL
-                  </a>
-                </li>
-              )}
             </ul>
           </nav>
           <div className="text-center p-10 mx-auto">
