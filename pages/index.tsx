@@ -223,7 +223,7 @@ export default function Home() {
               </p>
             </div>
             <div className=" py-10 flex flex-col gap-5 justify-center md:text-xl lg:flex-row lg:flex-wrap lg:gap-16">
-              <div className=" flex flex-col gap-1 justify-center items-center max-w-[66%] ">
+              <div className=" flex flex-col gap-1 justify-center items-center max-w-full lg:max-w-[66%]  ">
                 <div className="flex gap-2 items-center justify-center text-gray-800 dark:text-gray-200">
                   <SiNextdotjs />
                   <SiTypescript />
