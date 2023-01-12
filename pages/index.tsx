@@ -85,7 +85,7 @@ export default function Home() {
                     className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
                     href="./Alan_Rutyna_CV_EN.pdf"
                   >
-                    CV - EN
+                    CV-EN
                   </a>
                 </li>
               ) : (
@@ -94,7 +94,7 @@ export default function Home() {
                     className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
                     href="./Alan_Rutyna_CV.pdf"
                   >
-                    CV - PL
+                    CV-PL
                   </a>
                 </li>
               )}
