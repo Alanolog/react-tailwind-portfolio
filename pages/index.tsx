@@ -79,14 +79,18 @@ export default function Home() {
               >
                 {isEnglish ? "PL" : "EN"}
               </li>
-                <li>
-                  <a
-                    className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
-                    href={isEnglish ? "./Alan_Rutyna_CV_EN.pdf" : "./Alan_Rutyna_CV.pdf"}
-                  >
-                    CV
-                  </a>
-                </li>
+              <li>
+                <a
+                  className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-4"
+                  href={
+                    isEnglish
+                      ? "./Alan_Rutyna_CV_EN.pdf"
+                      : "./Alan_Rutyna_CV.pdf"
+                  }
+                >
+                  CV
+                </a>
+              </li>
             </ul>
           </nav>
           <div className="text-center p-10 mx-auto">
@@ -336,7 +340,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className=" py-3 flex justify-center border-t dark: bg-gray-900">
+      <footer className=" py-3 flex justify-center border-t dark:bg-gray-900">
         <h3 className=" text-xl font-burtons font-light dark:text-gray-400 flex gap-1  items-center">
           Alan Rutyna 2022
           <AiOutlineCopyrightCircle />
